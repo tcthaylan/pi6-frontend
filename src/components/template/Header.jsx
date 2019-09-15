@@ -1,9 +1,25 @@
 import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
-import {
-  BrowserRouter as Router, Route, Switch, Link,
-} from 'react-router-dom';
+const btnLoginStyle = {
+  backgroundColor: '#F22248',
+  color: '#fff',
+  padding: '10px 20px',
+  borderRadius: '4px',
+  fontSize: '13px',
+  fontWeight: 600,
+  textTransform: 'uppercase',
+  textDecoration: 'none',
+}
+
+const logoStyle = {
+  color: '#F22248',
+  margin:' 20px 0',
+  fontSize: '24px',
+  fontWeight: 'bold',
+  textDecoration: 'none',
+}
 
 class Header extends React.Component {
   constructor(props) {
@@ -12,27 +28,25 @@ class Header extends React.Component {
 
   render() {
     return (
-      <>
-        <div className="navbar">
-          <h1>Logo</h1>
-          <nav className="navlinks">
-            <ul className="navlinks-list">
-              <li>
-                <Link to={{
-                    pathname: '/home',
-                  }}
-                >Home</ Link>
-              </li>
-              <li>
-                <Link to={{
-                    pathname: '/ADMIN',
-                  }}
-                >Admin</ Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </>
+      <div className="navbar">
+        <Link 
+          to={{
+          pathname: '/'
+          }}
+          style={logoStyle}
+        >Epou Bear</ Link>
+        <nav className="navlinks">
+          <ul className="navlinks-list">
+            <li className="navlinks-list-item">
+              <Link to={{
+                  pathname: '/login',
+                }}
+                style={btnLoginStyle}
+              >Login</ Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     ) 
   }
 }

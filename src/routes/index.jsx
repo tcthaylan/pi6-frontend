@@ -3,7 +3,7 @@ import Admin from './Admin/Index'
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     exact: true,
     name: 'Home',
     component: Home,

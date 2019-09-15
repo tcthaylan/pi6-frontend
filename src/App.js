@@ -11,12 +11,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <Header />
-        <div className="container">
-          {routes.map(route => <Route {...route} {...this.props} />)}
-        </div>
-      </Router>
+      <div className="App">
+          <Header />
+          <div className="container">
+            {routes.map(route => <Route {...route} {...this.props} />)}
+          </div>
+      </div>
     );
   }
 }

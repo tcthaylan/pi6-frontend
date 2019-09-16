@@ -1,7 +1,9 @@
 import React from 'react';
 import './Index.css'
+import Category from '../../components/Category'
 
-const Home = () => {
+const Home = (props) => {
+  const { history } = props;
   return(
   <div className="homeContent">
     <div className="banner">
@@ -9,7 +11,13 @@ const Home = () => {
         <h1>Fugiat consectetur</h1>
         <p>Id sit pariatur proident officia ex.</p>
       </div>
-      <input type="text" className="banner-input" placeholder="Digite o seu endereço"/>
+      <input type="text" className="banner-input" placeholder="Digite o seu endereço" onKeyUp={(e) => {
+        if (e.keyCode === 13) {
+          history.push({
+            pathname: '/restaurantes/list'
+          })
+        }
+      }}/>
     </div>
     {/*  */}
     <div className="functionality">
@@ -33,9 +41,23 @@ const Home = () => {
     </div>
     {/*  */}
     <div className="categories">
-      <h2>Explore as categorias em alta</h2>
-      <ul>
-        
+      <h2 className="categories-title">Explore as categorias em alta</h2>
+      <ul className="categories-list">
+        <li className="categories-list-item">
+          <Category name="Brasileira" image="brasileira.jpg" />
+        </li>
+        <li className="categories-list-item">
+          <Category name="Hamburguer" image="hamburguer.jpg" />
+        </li>
+        <li className="categories-list-item">
+          <Category name="Churrasco" image="churrasco.jpg" />
+        </li>
+        <li className="categories-list-item">
+          <Category name="Pizza" image="pizza.jpg" />
+        </li>
+        <li className="categories-list-item">
+          <Category name="Japonesa" image="japonesa.jpg" />
+        </li>
       </ul>
     </div>
   </div>

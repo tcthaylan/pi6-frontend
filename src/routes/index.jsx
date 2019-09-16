@@ -1,18 +1,18 @@
 import Home from './Home/Index'
-import Admin from './Admin/Index'
+import RestaurantList from './Restaurant/List/Index'
 
 const routes = [
   {
     path: '/',
     exact: true,
-    name: 'Home',
+    name: 'Página inicial',
     component: Home,
 	},
   {
-    path: '/admin',
+    path: '/restaurantes/list',
     exact: true,
-    name: 'Admin',
-    component: Admin,
+    name: 'Lista de Restaurantes',
+    component: RestaurantList,
 	},
 ];
 

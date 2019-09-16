@@ -32,7 +32,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 600px;
+  height: 580px;
 }
 
 .functionality-list {
@@ -41,7 +41,8 @@
   align-items: center;
   position: absolute;
   top: -30px;
-  box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.100), -1px 2px 10px rgba(0, 0, 0, 0.100)
+  box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.100), -1px 2px 10px rgba(0, 0, 0, 0.100);
+  border-radius: 20px;
 }
 
 .functionality-list .functionality-list-item:first-child {
@@ -49,14 +50,20 @@
   border-top-left-radius: 20px;
 }
 
+.functionality-list .functionality-list-item:last-child {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .functionality-list-item {
+  display: flex;
+  flex-direction: column;
   padding: 25px;
   width: 350px;
   background-color: #fff;
 }
 
 .functionality-list-item > .card-image {
-  background-image: url('/images/icons/coffee.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -65,6 +72,17 @@
   height: 50px;
   margin-bottom: 15px;
 }
+
+.functionality-list .functionality-list-item:nth-child(1) > .card-image {
+  background-image: url('/images/icons/coffee.png');
+}
+.functionality-list .functionality-list-item:nth-child(2) > .card-image {
+  background-image: url('/images/icons/serving-dish.png');
+}
+.functionality-list .functionality-list-item:nth-child(3) > .card-image {
+  background-image: url('/images/icons/beer.png');
+}
+
 
 .functionality-list-item > .card-title {
   margin-bottom: 10px;
@@ -76,8 +94,21 @@
 
 /* categories */
 .categories {
-  margin-top: 100px;
-  height: 100px;
+  padding: 40px 0;
+}
+
+.categories-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-list-item {
+  margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
@@ -112,9 +143,14 @@
 
   /*funcionalities*/
 
+  .functionality {
+    height: 280px;
+  }
+
   .functionality-list  {
     flex-direction: row;
     margin: 0 10px;
+    border-bottom-left-radius: 20px;
   }
 
   .functionality-list-item {
@@ -127,10 +163,23 @@
     border-bottom-left-radius: 20px;
   }
 
+  .functionality-list,
   .functionality-list .functionality-list-item:last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  /*categories*/
+  .categories-title {
+    font-size: 30px;
+  }
+
+  .categories-list {
+    margin: 40px 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
 }
 
 @media (min-width: 992px) {

@@ -1,0 +1,31 @@
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #f2f2f2;
+  padding: 18px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+
+.menuItem-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.menuItem-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.menuItem-text-title {
+  margin-bottom: 4px;
+}
+
+.menuItem-text-price {
+  color: #077903;
+  font-weight: bold;
+  margin-top: 10px;
+}

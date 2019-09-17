@@ -17,7 +17,7 @@ class App extends React.Component {
           <div className="container">
             {routes.map(route => <Route {...route} {...this.props} />)}
           </div>
-          <Footer />
+          {/* <Footer /> */}
       </div>
     );
   }

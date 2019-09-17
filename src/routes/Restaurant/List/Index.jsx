@@ -8,6 +8,7 @@ class RestaurantList extends React.Component {
   }
 
   render() {
+    const { history } = this.props;
     return(
       <div>
         <div className="container-restaurantList">
@@ -18,6 +19,7 @@ class RestaurantList extends React.Component {
           <ol className="restaurantList">
             <li className="restaurantList-item">
               <Restaurant 
+                history={history}
                 image="restaurant01.jpg"
                 name="Al Capizza 24h "
                 stars="4.4"
@@ -27,7 +29,8 @@ class RestaurantList extends React.Component {
               />
             </li>
             <li className="restaurantList-item">
-              <Restaurant 
+              <Restaurant
+                history={history} 
                 image="restaurant02.jpg"
                 name="Kisoji Sushi"
                 stars="4.2"
@@ -38,6 +41,7 @@ class RestaurantList extends React.Component {
             </li>
             <li className="restaurantList-item">
               <Restaurant 
+                history={history}
                 image="restaurant03.jpg"
                 name="Istambul"
                 stars="2.4"
@@ -48,6 +52,7 @@ class RestaurantList extends React.Component {
             </li>
             <li className="restaurantList-item">
               <Restaurant 
+                history={history}
                 image="restaurant04.jpg"
                 name="Johnny Rockets"
                 stars="4.4"
@@ -58,6 +63,7 @@ class RestaurantList extends React.Component {
             </li>
             <li className="restaurantList-item">
               <Restaurant 
+                history={history}
                 image="restaurant05.jpg"
                 name="Black Dog"
                 stars="4.4"
@@ -68,6 +74,7 @@ class RestaurantList extends React.Component {
             </li>
             <li className="restaurantList-item">
               <Restaurant 
+                history={history}
                 image="restaurant06.jpg"
                 name="Poke Haus"
                 stars="3.4"

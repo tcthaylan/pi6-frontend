@@ -1,5 +1,6 @@
 import Home from './Home/Index'
 import RestaurantList from './Restaurant/List/Index'
+import RestaurantMenu from './Menu/List/Index'
 
 const routes = [
   {
@@ -13,6 +14,12 @@ const routes = [
     exact: true,
     name: 'Lista de Restaurantes',
     component: RestaurantList,
+	},
+  {
+    path: '/restaurantes/menu/list',
+    exact: true,
+    name: 'Menu restaurante',
+    component: RestaurantMenu,
 	},
 ];
 

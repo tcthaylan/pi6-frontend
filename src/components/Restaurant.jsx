@@ -23,7 +23,7 @@ const Restaurant = (props) => {
           className="restaurant-btnMenu"
           onClick={() => {
             history.push({
-              pathname: 'restaurante/menu'
+              pathname: '/restaurantes/menu/list'
             })
           }}
         >View menu</button>

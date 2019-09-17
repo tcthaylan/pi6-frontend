@@ -13,13 +13,90 @@
   width: 90%;
   align-self: center;
 }
+.menu {
+  margin: 0 25px;
+}
+
+.menu-title {
+  margin: 15px 0;
+}
+
+.menu-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 15px;
+}
+
+.menu-filters > h4 {
+  font-size: 20px;  
+  font-weight: 400;
+}
+
+.menu-filters > button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 800ms;  
+}
+
+.menu-filters > button:hover {
+  background-color: #ddd;
+
+}
 
 .menu-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px 0;
 }
 
 .menu-list-item {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+}
+
+.paginate-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.paginate-list > li {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(3, 3, 3);
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  .menu-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

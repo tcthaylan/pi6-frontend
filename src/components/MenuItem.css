@@ -1,12 +1,11 @@
 .menuItem {
   display: flex;
   flex-direction: row;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #d6d6d6;
   padding: 18px;
   border-radius: 3px;
   width: 100%;
 }
-
 
 .menuItem-img {
   width: 90px;
@@ -28,4 +27,29 @@
   color: #077903;
   font-weight: bold;
   margin-top: 10px;
+}
+
+
+@media (min-width: 576px) {
+  .menuItem {
+    width: 430px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menuItem {
+    width: 390px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menuItem {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menuItem {
+    width: 370px;
+  }
 }

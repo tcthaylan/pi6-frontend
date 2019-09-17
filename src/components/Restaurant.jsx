@@ -2,20 +2,23 @@ import React from 'react'
 import './Restaurant.css'
 
 const Restaurant = (props) => {
-  const { history } = props;
+  const { 
+    history, name, starts, minutes, distance, desc, image, 
+  } = props;
+  const url = `/images/restaurants/${image}`
   return(
     <div className="restaurant">
-      <img src="/images/restaurants/restaurant01.jpg" className="restaurant-image"/>
+      <img src={url} className="restaurant-image"/>
       <div className="restaurant-card">
         <div className="container-name-starts">
-          <h2 className="restaurant-name">Al Capizza 24h - Pinheiros</h2>
-          <p className="restaurant-starts">4.1</p>
+          <h2 className="restaurant-name">{name}</h2>
+          <p className="restaurant-starts">{starts}</p>
         </div>
         <div className='restaurant-details'>
-          <p className="restaurant-details-minutes">15 min</p>
-          <p className="restaurant-details-distance">2.5km</p>
+          <p className="restaurant-details-minutes">{`${minutes} min`}</p>
+          <p className="restaurant-details-distance">{`${distance} km`}</p>
         </div>
-        <p className="restaurant-desc">Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt.</p>
+        <p className="restaurant-desc">{desc}</p>
         <button 
           className="restaurant-btnMenu"
           onClick={() => {

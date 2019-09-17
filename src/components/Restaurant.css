@@ -9,6 +9,7 @@
 
 .restaurant-card {
   padding: 10px 15px;
+  background-color: #fff;
 }
 
 .container-name-starts {
@@ -46,7 +47,7 @@
   background-color: rgb(242, 34, 72);
   color: #fff;
   text-transform: uppercase;
-  padding: 13px;
+  padding: 10px 13px;
   font-weight: 600;
   font-size: 12px;
   border-radius: 3px;

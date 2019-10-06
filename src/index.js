@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import TestStore from './store/TestStore'
+import Auth from './store/Auth'
 import { Provider } from 'mobx-react';
 import {
   BrowserRouter,
@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom';
 
 const stores = {
-  TestStore,
+  Auth,
 };
 
 ReactDOM.render(

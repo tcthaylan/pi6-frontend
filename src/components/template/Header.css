@@ -7,3 +7,25 @@
   padding: 0 15px;
   border-bottom: 1px solid #ddd;
 }
+
+.navlinks-list {
+  display: flex;
+}
+
+.navlinks-list-item {
+  margin-left: 10px;
+}
+
+.navlinks-list li:nth-child(2) > a {
+  background-color: #fff !important;
+  color: #f22248 !important;
+  border: 2px solid #f22248;
+  padding: 8px 20px !important;
+  transition: all 800ms;
+}
+
+.navlinks-list li:nth-child(2) > a:hover {
+  background-color: #f22248 !important;
+  color: #fff !important;
+  border: 2px solid #f22248;
+}

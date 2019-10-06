@@ -39,10 +39,17 @@ class Header extends React.Component {
           <ul className="navlinks-list">
             <li className="navlinks-list-item">
               <Link to={{
-                  pathname: '/login',
+                  pathname: '/auth/login',
                 }}
                 style={btnLoginStyle}
               >Login</ Link>
+            </li>
+            <li className="navlinks-list-item">
+              <Link to={{
+                  pathname: '/auth/register',
+                }}
+                style={btnLoginStyle}
+              >Registrar</ Link>
             </li>
           </ul>
         </nav>

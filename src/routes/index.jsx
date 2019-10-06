@@ -1,6 +1,7 @@
 import Home from './Home/Index'
 import RestaurantList from './Restaurant/List/Index'
 import RestaurantMenu from './Menu/List/Index'
+import Login from './Auth/Login/Index'
 
 const routes = [
   {
@@ -20,7 +21,13 @@ const routes = [
     exact: true,
     name: 'Menu restaurante',
     component: RestaurantMenu,
-	},
+  },
+  {
+    path: '/auth/login',
+    exact: true,
+    name: 'Login',
+    component: Login,
+  }
 ];
 
 export default routes;

@@ -1,0 +1,36 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.admin-header {
+  text-align: center;
+}
+
+.admin-addRestaurant {
+  margin: 20px 0;
+}
+
+.admin-addRestaurant > button{
+  background-color: #0b8b40;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.admin-restaurantList {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.admin-paginate {
+  margin: 20px 0;
+}

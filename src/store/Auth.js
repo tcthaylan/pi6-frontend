@@ -1,9 +1,10 @@
-import { decorate, observable, action } from "mobx"
+import { decorate, observable, action, computed } from "mobx"
 import axios from 'axios';
 import { ip } from '../utils/config'
+import localStorage from '../utils/localStorage'
 
 class Auth {
-  loggedUser = {}
+  currentUserId = ""
 
   async signIn(email, password) {
     try {
@@ -11,8 +12,23 @@ class Auth {
         email,
         password
       });
-      this.loggedUser = response.data.user;
+      this.currentUserId = response.data.user._id;
+      console.log(this.currentUserId)
       return response;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async getLoggedUser() {
+    try {
+      const token = localStorage.get('token');
+      const response = await axios.get(`${ip}/users/me`,  {
+        headers: {
+          Authorization: "Bearer " + token
+        }
+      })
+      return response
     } catch (error) {
       return error;
     }
@@ -20,8 +36,9 @@ class Auth {
 }
 
 decorate(Auth, {
-  loggedUser: observable,
+  currentUserId: observable,
   signIn: action,
+  getLoggedUser: action
 })
 
 export default new Auth;

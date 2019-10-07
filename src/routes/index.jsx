@@ -2,7 +2,9 @@ import Home from './Home/Index'
 import RestaurantList from './Restaurant/List/Index'
 import RestaurantMenu from './Menu/List/Index'
 import Login from './Auth/Login/Index'
-
+import AdminList from './Admin/ListRestaurant/Index'
+import AdminAddRestaurant from './Admin/AddRestaurant/Index'
+import AdminEditRestaurant from './Admin/EditRestaurant/Index'
 const routes = [
   {
     path: '/',
@@ -27,6 +29,24 @@ const routes = [
     exact: true,
     name: 'Login',
     component: Login,
+  },
+  {
+    path: '/admin',
+    exact: true,
+    name: 'Admin',
+    component: AdminList,
+  },
+  {
+    path: '/admin/addRestaurant',
+    exact: true,
+    name: 'AdminAddRestaurant',
+    component: AdminAddRestaurant,
+  },
+  {
+    path: '/admin/editRestaurant',
+    exact: true,
+    name: 'AdminEditRestaurant',
+    component: AdminEditRestaurant,
   }
 ];
 

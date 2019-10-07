@@ -1,0 +1,72 @@
+.adminAdd-container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adminAddRestaurant-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.adminAddRestaurant-form {
+  border-top: 4px solid #f22248;
+  width: 400px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.adminAddRestaurant-form > .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.adminAddRestaurant-form > .form-group > label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.adminAddRestaurant-form > .form-group > input {
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  height: 39px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.adminAddRestaurant-buttons {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.adminAddRestaurant-buttons button {
+  width: 49%;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 13px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.adminAddRestaurant-buttons button:nth-child(1) {
+  border: 1px solid #f22248;
+  background-color: #f22248;
+}
+
+.adminAddRestaurant-buttons button:nth-child(2) {
+  background-color: #fff;
+  color: #f22248;
+  border: 1px solid #f22248;
+}

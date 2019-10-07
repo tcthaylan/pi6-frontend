@@ -1,0 +1,72 @@
+.adminEdit-container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adminEditRestaurant-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.adminEditRestaurant-form {
+  border-top: 4px solid #f22248;
+  width: 400px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.adminEditRestaurant-form > .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.adminEditRestaurant-form > .form-group > label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.adminEditRestaurant-form > .form-group > input {
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  height: 39px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.adminEditRestaurant-buttons {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.adminEditRestaurant-buttons button {
+  width: 49%;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 13px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.adminEditRestaurant-buttons button:nth-child(1) {
+  border: 1px solid #f22248;
+  background-color: #f22248;
+}
+
+.adminEditRestaurant-buttons button:nth-child(2) {
+  background-color: #fff;
+  color: #f22248;
+  border: 1px solid #f22248;
+}

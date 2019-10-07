@@ -1,0 +1,67 @@
+.modal-deleteItens-container {
+  width: 500px;
+}
+
+.modal-deleteItens-container .modal-header {
+  background-color: #f22248;
+  height: 55px;
+  padding: 0 20px;
+}
+
+.modal-deleteItens-container .modal-header > h2 {
+  line-height: 55px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.modal-deleteItens-container .modal-body {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.modal-deleteItens-container .modal-body-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-deleteItens-container .modal-body > .modal-body-item > .modal-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.modal-deleteItens-container .modal-body > h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-deleteItens-container .modal-footer {
+  height: 55px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.modal-footer > button {
+  color: #f22248;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  font-size: 13px;
+  background-color: #fff;
+  border: 1px solid #f22248;
+  border-radius: 2px;
+  margin-left: 5px;
+  transition: all 800ms;
+}
+
+.modal-footer > button:hover {
+  color: #fff;
+  background-color: #f22248;
+
+}

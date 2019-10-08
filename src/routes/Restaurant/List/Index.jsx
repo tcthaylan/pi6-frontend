@@ -1,14 +1,32 @@
 import React from 'react'
 import './Index.css'
 import Restaurant from '../../../components/Restaurant'
+import Map from '../../../components/Map';
 
 class RestaurantList extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      geocodingAddress: ""
+    }
+  }
+
+  async componentDidMount() {
+    const { history } = this.props;
+    const { state } = history.location;
+    if (state !== undefined && state.length) {
+      const data = JSON.parse(state);
+      this.setState({ geocodingAddress: data });
+    } else {
+      history.push({
+        pathname: '../',
+      });
+    }
   }
 
   render() {
     const { history } = this.props;
+    const { geocodingAddress } = this.state;
     return(
       <div>
         <div className="container-restaurantList">
@@ -28,66 +46,10 @@ class RestaurantList extends React.Component {
                 desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
               />
             </li>
-            <li className="restaurantList-item">
-              <Restaurant
-                history={history} 
-                image="restaurant02.jpg"
-                name="Kisoji Sushi"
-                stars="4.2"
-                minutes="15"
-                distance="2.4"
-                desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
-              />
-            </li>
-            <li className="restaurantList-item">
-              <Restaurant 
-                history={history}
-                image="restaurant03.jpg"
-                name="Istambul"
-                stars="2.4"
-                minutes="15"
-                distance="2.4"
-                desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
-              />
-            </li>
-            <li className="restaurantList-item">
-              <Restaurant 
-                history={history}
-                image="restaurant04.jpg"
-                name="Johnny Rockets"
-                stars="4.4"
-                minutes="33"
-                distance="2.4"
-                desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
-              />
-            </li>
-            <li className="restaurantList-item">
-              <Restaurant 
-                history={history}
-                image="restaurant05.jpg"
-                name="Black Dog"
-                stars="4.4"
-                minutes="10"
-                distance="2.4"
-                desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
-              />
-            </li>
-            <li className="restaurantList-item">
-              <Restaurant 
-                history={history}
-                image="restaurant06.jpg"
-                name="Poke Haus"
-                stars="3.4"
-                minutes="12"
-                distance="2.4"
-                desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
-              />
-            </li>
           </ol>
         </div>
         <div className="restaurant-maps">
-          <h1 className="restaurant-maps-title">Exemplo mapa</h1>
-          <img src="/images/maps-example.png" className="restaurant-maps-img" />
+          <Map geocodingAddress={geocodingAddress} />
         </div>
       </div>
     )

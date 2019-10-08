@@ -13,8 +13,10 @@ const Home = (props) => {
       </div>
       <input type="text" className="banner-input" placeholder="Digite o seu endereço" onKeyUp={(e) => {
         if (e.keyCode === 13) {
+          const inputValue = document.querySelector('.banner-input').value;
           history.push({
-            pathname: '/restaurantes/list'
+            pathname: '/restaurantes/list',
+            state: JSON.stringify(inputValue),
           })
         }
       }}/>

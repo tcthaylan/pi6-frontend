@@ -32,11 +32,22 @@ class Restaurant {
       return error;
     }
   }
+
+  async getAll() {
+    try {
+      const response = await axios.get(`${ip}/client/restaurants`)
+      return response.data;
+    } catch (error) {
+      console.log(error)
+      return error;
+    }
+  }
 }
 
 decorate(Restaurant, {
   add: action,
-  delete: action
+  delete: action,
+  getAll: action
 })
 
 export default new Restaurant;

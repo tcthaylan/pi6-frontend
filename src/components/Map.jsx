@@ -6,6 +6,7 @@ import { inject } from 'mobx-react'
 const mapStyles = {
   width: '100%',
   height: '500px',
+  maxHeight: '500px'
 };
 
 const apyKey = "AIzaSyCcZo6RgKRy-vjVBiCdZhGrdY154Dt6CFg"

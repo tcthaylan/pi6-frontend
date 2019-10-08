@@ -1,13 +1,11 @@
 ADMIN
-- Modal excluir restaurantes - OK
-- Página add/edit - OK
-- função add/edit
-*paginação
+- Responsivo*
+- Header Responsivo
+- Editar
+- Forma de controlar o menu
+- Paginação
 
 CLIENT
-- api maps
-- listar restaurantes
-- header dinâmico
-
-img bd
-listar uf e cidade...
+- listar restaurantes*
+- Arrumar footer*
+- Paginação

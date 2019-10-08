@@ -52,7 +52,8 @@ class RestaurantAdmin extends React.Component {
                 onClick={() => {
                   this.openModal('delete', {
                     restaurantId,
-                    name
+                    name,
+                    url
                   });
                 }}
               >Excluir</button>

@@ -46,7 +46,7 @@ class Header extends React.Component {
             </li>
             <li className="navlinks-list-item">
               <Link to={{
-                  pathname: '/auth/register',
+                  pathname: '',
                 }}
                 style={btnLoginStyle}
               >Registrar</ Link>

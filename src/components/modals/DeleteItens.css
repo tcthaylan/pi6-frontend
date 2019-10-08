@@ -26,11 +26,15 @@
 }
 
 .modal-deleteItens-container .modal-body > .modal-body-item > .modal-img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 1px solid #000;
   margin-bottom: 10px;
+}
+
+.modal-deleteItens-container .modal-body > .modal-body-item > p {
+  font-weight: bold;
 }
 
 .modal-deleteItens-container .modal-body > h3 {

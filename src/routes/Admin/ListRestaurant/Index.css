@@ -25,12 +25,41 @@
 }
 
 .admin-restaurantList {
-  width: 700px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0;
+}
+
+.admin-restaurantList > .restaurant-admin {
+  margin-bottom: 20px;
+  width: 350px;
 }
 
 .admin-paginate {
   margin: 20px 0;
+}
+
+@media (min-width: 576px) {
+  .admin-restaurantList > .restaurant-admin {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .admin-restaurantList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }

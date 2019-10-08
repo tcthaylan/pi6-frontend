@@ -1,5 +1,4 @@
 
-//https://maps.googleapis.com/maps/api/geocode/json?address=R.%20Augusta,%201513%20-%20Cerqueira%20César,%20São%20Paulo&key={{ api_key  }}
 [
   {
     "name": "Bovinu's",
@@ -77,4 +76,4 @@
   
   
 ]
-//R. Augusta, 1499 - Consolação, São Paulo - SP, 01305-100
+

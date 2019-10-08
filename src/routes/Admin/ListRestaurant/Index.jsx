@@ -35,10 +35,10 @@ class AdminList extends Component {
     const { user } = this.state;
     const { history } = this.props;
     if (user.restaurants) {
-      return user.restaurants.map(item => (
+      return user.restaurants.map((item, i) => (
         <RestaurantAdmin
           restaurantId={item._id}
-          image="restaurant01.jpg"
+          image={`restaurant0${i + 1}.jpg`}
           name={item.name}
           desc="Mollit id consequat consectetur laborum pariatur "
           history={history}

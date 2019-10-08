@@ -17,7 +17,7 @@ const DeleteItens = props => {
       <div className="modal-body">
         <h3>Você tem certeza que dejesa excluir este item?</h3>
         <div className="modal-body-item">
-          <div className="modal-img"></div>
+          <img src={data.url} className="modal-img"/>
           <p>{data.name}</p>
         </div>
       </div>

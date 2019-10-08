@@ -71,9 +71,19 @@
       "uf": "SP",
       "cidade": "São Paulo"
     }
+  },
+  {
+    "name": "Let's Poke - Consolação",
+    "endereco": {
+      "endereco": "R. Antônio Carlos",
+      "numero": 419,
+      "bairro": "Consolação",
+      "complemento": "restaurante",
+      "cep": "01309-011",
+      "uf": "SP",
+      "cidade": "São Paulo"
+    }
   }
-  
-  
   
 ]
 

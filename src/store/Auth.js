@@ -13,7 +13,6 @@ class Auth {
         password
       });
       this.currentUserId = response.data.user._id;
-      console.log(this.currentUserId)
       return response;
     } catch (error) {
       return error;
@@ -33,11 +32,25 @@ class Auth {
       return error;
     }
   }
+
+  async signUp(data) {
+    try {
+      const response = await axios.post(`${ip}/auth/register`, data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      return response;
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 decorate(Auth, {
   currentUserId: observable,
   signIn: action,
+  signUp: action,
   getLoggedUser: action
 })
 

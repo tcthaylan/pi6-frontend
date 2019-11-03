@@ -1,11 +1,21 @@
-ADMIN
-- Responsivo*
-- Header Responsivo
-- Editar
-- Forma de controlar o menu
-- Paginação
+Sistema
+- upload imagens
+- imagens dinâmicas
+- comparar preço das pizzas com filtros
+- corrigir o footer
+- definir um raio para a lista de restaurantes 
+- registrar
+- Paginação 
+- header dinâmico
 
-CLIENT
-- listar restaurantes*
-- Arrumar footer*
-- Paginação
+
+- editar/deletar 
+- ajustes no front end e criação de novas telas
+- escrever textos 
+- página admin está muito feia e não está responsiva
+- página do alimento
+
+
+
+- opcionais
+- mensagens de erro

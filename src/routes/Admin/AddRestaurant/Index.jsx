@@ -2,6 +2,8 @@ import React from 'react';
 import './Index.css';
 import { inject } from 'mobx-react';
 import UploadImage from '../../../components/Upload/UploadImage'
+import { uniqueId } from 'lodash';
+import filesize from 'filesize'
 
 const checkFields = () => {
   const fields = document.querySelectorAll('.form-group input')
@@ -42,16 +44,44 @@ const createObject = () => {
 class AdminAddRestaurant extends React.Component {
   constructor(props) {
     super(props);
+
+    this. state = {
+      uploadedFiles: []
+    };
+  }
+
+  handleUpload = files => {
+    const uploadedFiles = files.map(file => ({
+      file,
+      id: uniqueId(),
+      name: file.name,
+      readableSize: filesize(file.size),
+      preview: URL.createObjectURL(file),
+      progress: 0,
+      uploaded: false,
+      error: false,
+      url: null,
+    }))
+
+    this.setState({
+      uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
+    })
+  }
+
+  processUpload = (uploadedFile) => {
+
   }
 
   async addRestaurant() {
+    const { uploadedFiles } = this.state;
     const { Restaurant, history } = this.props;
     const obj = createObject();
-    await Restaurant.add(obj)
+    await Restaurant.add({...obj, file: uploadedFiles[0].file})
     history.push('../admin')
   }
 
   render() {
+    const { uploadedFiles } = this.state
     const { history } = this.props;
     return (
       <div className="adminAdd-container">
@@ -97,7 +127,7 @@ class AdminAddRestaurant extends React.Component {
             <input type="text" id="cidade"/>
           </div>
         </div>
-        <UploadImage />
+        <UploadImage uploadedFiles={uploadedFiles} handleUpload={this.handleUpload}/>
         <div className="adminAddRestaurant-buttons">
           <button 
             onClick={() => {

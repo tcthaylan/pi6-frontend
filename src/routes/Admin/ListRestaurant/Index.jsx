@@ -27,8 +27,7 @@ class AdminList extends Component {
     const response = await Auth.getLoggedUser();
     if (response.status !== 200) history.push('./login');
 
-    const { user } = response.data;
-    this.setState({ user });
+    this.setState({ user: response.data });
   }
 
   renderRestaurants() {

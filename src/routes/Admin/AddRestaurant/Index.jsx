@@ -1,6 +1,7 @@
 import React from 'react';
 import './Index.css';
 import { inject } from 'mobx-react';
+import UploadImage from '../../../components/Upload/UploadImage'
 
 const checkFields = () => {
   const fields = document.querySelectorAll('.form-group input')
@@ -96,6 +97,7 @@ class AdminAddRestaurant extends React.Component {
             <input type="text" id="cidade"/>
           </div>
         </div>
+        <UploadImage />
         <div className="adminAddRestaurant-buttons">
           <button 
             onClick={() => {

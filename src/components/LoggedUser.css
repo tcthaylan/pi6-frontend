@@ -1,0 +1,27 @@
+.loggedUser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.loggedUser > img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.loggedUser > p {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.loggedUser > .btn-logout {
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(242, 34, 72);
+  padding: 8px 25px;
+  border-radius: 20px;;
+}

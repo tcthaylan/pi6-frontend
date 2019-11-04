@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { inject } from 'mobx-react';
+import LoggedUser from '../LoggedUser'
 
 const btnLoginStyle = {
   backgroundColor: '#F22248',
@@ -24,9 +26,23 @@ const logoStyle = {
 class Header extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      loggedUser: {}
+    }
+  }
+
+  async componentDidMount() {
+    const { Auth } = this.props;
+    const loggedUser = await Auth.getLoggedUser();
+    if (loggedUser.data) {
+      this.setState({ loggedUser: loggedUser.data })
+    } 
   }
 
   render() {
+    const { loggedUser } = this.state;
+    const { history } = this.props;
     return (
       <div className="navbar">
         <Link 
@@ -36,26 +52,30 @@ class Header extends React.Component {
           style={logoStyle}
         >Epou Bear</ Link>
         <nav className="navlinks">
-          <ul className="navlinks-list">
-            <li className="navlinks-list-item">
-              <Link to={{
-                  pathname: '/auth/login',
-                }}
-                style={btnLoginStyle}
-              >Login</ Link>
-            </li>
-            <li className="navlinks-list-item">
-              <Link to={{
-                  pathname: '/auth/register',
-                }}
-                style={btnLoginStyle}
-              >Registrar</ Link>
-            </li>
-          </ul>
+          {!loggedUser.email ? (
+            <ul className="navlinks-list">
+              <li className="navlinks-list-item">
+                <Link to={{
+                    pathname: '/auth/login',
+                  }}
+                  style={btnLoginStyle}
+                >Login</ Link>
+              </li>
+              <li className="navlinks-list-item">
+                <Link to={{
+                    pathname: '/auth/register',
+                  }}
+                  style={btnLoginStyle}
+                >Registrar</ Link>
+              </li>
+            </ul>
+          ) : (
+            <LoggedUser email={loggedUser.email} history={history}/>
+          )}
         </nav>
       </div>
     ) 
   }
 }
 
-export default Header;
+export default inject('Auth')(Header);

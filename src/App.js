@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Header />
+          <Header {...this.props}/>
           <div className="container">
             {routes.map(route => <Route {...route} {...this.props} />)}
           </div>

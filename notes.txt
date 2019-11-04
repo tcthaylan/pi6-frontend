@@ -4,9 +4,7 @@ Sistema
 - comparar preço das pizzas com filtros
 - corrigir o footer
 - definir um raio para a lista de restaurantes 
-- registrar
 - Paginação 
-- header dinâmico
 
 
 - editar/deletar 
@@ -17,5 +15,6 @@ Sistema
 
 
 
-- opcionais
+OPTIONS
 - mensagens de erro
+- erro no header (não atualiza)

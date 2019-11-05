@@ -5,7 +5,7 @@ const Restaurant = (props) => {
   const { 
     history, name, starts, minutes, distance, desc, image, 
   } = props;
-  const url = `/images/restaurants/${image}`
+  const url = `http://localhost:3000/files/${image}`
   return(
     <div className="restaurant">
       <img src={url} className="restaurant-image"/>

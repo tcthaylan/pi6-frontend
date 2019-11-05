@@ -48,7 +48,13 @@ export class MapContainer extends Component {
     const formatedAddress = address.trim().replace(/ /g, '%20');
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${formatedAddress}&key=${apyKey}`
     const response = await axios.get(url)
-    return response.data.results[0].geometry.location;
+    if (response.data.results.length) {
+      return response.data.results[0].geometry.location;
+    }
+    return {
+      lat: -23.5489, 
+      lng: -46.6388
+    }
   }
 
   async getMarkers() {
@@ -62,11 +68,13 @@ export class MapContainer extends Component {
     })
     
     const markers = [];
-
+    
     await Promise.all(formatedAddress.map(async item => {
       const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${item}&key=${apyKey}`
       const response = await axios.get(url)
-      markers.push(response.data.results[0].geometry.location)
+      if (response.data.results.length) {
+        markers.push(response.data.results[0].geometry.location)
+      }
     }))
 
     return markers;

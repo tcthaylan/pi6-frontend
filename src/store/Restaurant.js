@@ -5,20 +5,21 @@ import localStorage from '../utils/localStorage'
 
 class Restaurant {
   async add(obj) {
-    console.log(obj)
     try {
       const data = new FormData();
+      const endereco = { 
+        endereco: obj.endereco.endereco,
+        numero: obj.endereco.numero,
+        bairro: obj.endereco.bairro,
+        complemento: obj.endereco.complemento,
+        cep: obj.endereco.cep,
+        uf: obj.endereco.uf,
+        cidade: obj.endereco.cidade,
+      }
       data.append('picture', obj.file)
       data.append('name', obj.name)
-      data.append('endereco', obj.endereco)
-      data.append('numero', obj.numero)
-      data.append('bairro', obj.bairro)
-      data.append('complemento', obj.complemento)
-      data.append('cep', obj.cep)
-      data.append('uf', obj.uf)
-      data.append('cidade', obj.cidade)
       data.append('description', obj.description)
-
+      data.append('endereco', JSON.stringify(endereco))
       const token = localStorage.get('token');
       const response = await axios.post(`${ip}/restaurants`, data, {
         headers: {
@@ -30,11 +31,6 @@ class Restaurant {
     } catch (error) {
       return error
     }
-    // try {
-    //   
-    // } catch (error) {
-    //   return error;
-    // }
   }
 
   async delete(restaurantId) {

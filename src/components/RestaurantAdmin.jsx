@@ -27,7 +27,7 @@ class RestaurantAdmin extends React.Component {
       history, name, starts, minutes, distance, desc, image, restaurantId,
     } = this.props;
     const { modal } = this.state;
-    const url = `/images/restaurants/${image}`
+    const url = `http://localhost:3000/files/${image}`
     return(
       <React.Fragment>
         <div className="restaurant-admin">

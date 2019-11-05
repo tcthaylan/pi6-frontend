@@ -12,19 +12,18 @@ class LoggedUser extends React.Component {
 
   logout() {
     const { history } = this.props;
-    console.log(history)
     localStorage.remove('token')
     history.push('./')
-    console.log('oi')
   }
 
   render() {
-    const { email } = this.props;
-    console.log(email)
+    const { email, history } = this.props;
     return(
       <div className="loggedUser">
         <img src="./default-user.png" />
-        <p>{email}</p>
+        <p onClick={() => {
+          history.push('/admin')
+        }}>{email}</p>
         <span 
           onClick={this.logout}
           className="btn-logout"

@@ -40,7 +40,7 @@ class RestaurantList extends React.Component {
       <li className="restaurantList-item">
         <Restaurant 
           history={history}
-          image={`restaurant0${i+1}.jpg`}
+          image={item.picture}
           name={item.name}
           stars="4.4"
           minutes="15"

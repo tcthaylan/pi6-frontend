@@ -37,7 +37,7 @@ class AdminList extends Component {
       return user.restaurants.map((item, i) => (
         <RestaurantAdmin
           restaurantId={item._id}
-          image={`restaurant0${i + 1}.jpg`}
+          image={item.picture}
           name={item.name}
           desc="Mollit id consequat consectetur laborum pariatur "
           history={history}

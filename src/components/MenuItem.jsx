@@ -3,7 +3,7 @@ import './MenuItem.css'
 
 const MenuItem = (props) => {
   const { name, desc, price, image } = props;
-  const url = `/images/menu/${image}`
+  const url = `http://localhost:3000/files/${image}`
   return (
     <div className="menuItem">
       <img src={url} className="menuItem-img"/>

@@ -61,13 +61,13 @@ class Header extends React.Component {
                   style={btnLoginStyle}
                 >Login</ Link>
               </li>
-              <li className="navlinks-list-item">
+              {/* <li className="navlinks-list-item">
                 <Link to={{
                     pathname: '/auth/register',
                   }}
                   style={btnLoginStyle}
                 >Registrar</ Link>
-              </li>
+              </li> */}
             </ul>
           ) : (
             <LoggedUser email={loggedUser.email} history={history}/>

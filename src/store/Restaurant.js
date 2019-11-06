@@ -52,8 +52,22 @@ class Restaurant {
       const response = await axios.get(`${ip}/client/restaurants`)
       return response.data;
     } catch (error) {
-      console.log(error)
       return error;
+    }
+  }
+
+  async getFoods(restaurantId) {
+    try {
+      console.log('restaurantId')
+      const response = await axios.get(`${ip}/client/${restaurantId}/foods`, {
+        headers: {
+         'Content-Type': 'application/json'
+        }
+      });
+      console.log(response)
+      return response
+    } catch (error) {
+      return error
     }
   }
 }
@@ -61,7 +75,8 @@ class Restaurant {
 decorate(Restaurant, {
   add: action,
   delete: action,
-  getAll: action
+  getAll: action,
+  getFoods: action
 })
 
 export default new Restaurant;

@@ -1,11 +1,20 @@
+- Cadastrar pizzarias e pizzas
+- Escrever textos
+- Arrumar footer
+- listar pizzas dinâmico
+- hospedar site
+- pesquisar pizzas por nome e listar ordem de preços
+/////
+- GET e POST pizzas api - OK
+- Remover a opção de criar conta - OK
+- desabilitar paginação - OK
+//////////////////////////////////
+
 Sistema
-- upload imagens
-- imagens dinâmicas
 - comparar preço das pizzas com filtros
 - corrigir o footer
 - definir um raio para a lista de restaurantes 
 - Paginação 
-
 
 - editar/deletar 
 - ajustes no front end e criação de novas telas
@@ -18,3 +27,4 @@ Sistema
 OPTIONS
 - mensagens de erro
 - erro no header (não atualiza)
+

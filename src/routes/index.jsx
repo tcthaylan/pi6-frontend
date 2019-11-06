@@ -6,6 +6,7 @@ import Register from './Auth/Register/Index'
 import AdminList from './Admin/ListRestaurant/Index'
 import AdminAddRestaurant from './Admin/AddRestaurant/Index'
 import AdminEditRestaurant from './Admin/EditRestaurant/Index'
+import FoodList from './Food/List/Index'
 const routes = [
   {
     path: '/',
@@ -54,6 +55,12 @@ const routes = [
     exact: true,
     name: 'AdminEditRestaurant',
     component: AdminEditRestaurant,
+  },
+  {
+    path: '/pizzas/lista',
+    exact: true,
+    name: 'FoodList',
+    component: FoodList,
   }
 ];
 

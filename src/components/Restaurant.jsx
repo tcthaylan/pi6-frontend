@@ -3,7 +3,7 @@ import './Restaurant.css'
 
 const Restaurant = (props) => {
   const { 
-    history, name, starts, minutes, distance, desc, image, 
+    history, name, starts, minutes, distance, desc, image, id 
   } = props;
   const url = `http://localhost:3000/files/${image}`
   return(
@@ -23,7 +23,8 @@ const Restaurant = (props) => {
           className="restaurant-btnMenu"
           onClick={() => {
             history.push({
-              pathname: '/restaurantes/menu/list'
+              pathname: '/restaurantes/menu/list',
+              state: JSON.stringify(id) 
             })
           }}
         >View menu</button>

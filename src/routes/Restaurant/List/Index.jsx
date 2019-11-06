@@ -39,13 +39,14 @@ class RestaurantList extends React.Component {
     return restaurants.map((item, i) => 
       <li className="restaurantList-item">
         <Restaurant 
+          id={item._id}
           history={history}
           image={item.picture}
           name={item.name}
           stars="4.4"
           minutes="15"
           distance="2.4"
-          desc="Quis voluptate velit anim reprehenderit quis Lorem qui. Est consequat culpa laborum ea proident fugiat nostrud irure qui deserunt."
+          desc={item.description}
         />
       </li>
     )
@@ -57,6 +58,22 @@ class RestaurantList extends React.Component {
     return(
       <div>
         <div className="container-restaurantList">
+          <div className="searchFoods">
+            <input 
+              type="text"
+              className="searchFoods-input" 
+              placeholder="Pesquise por uma pizza"
+              onKeyUp={(e) => {
+                if (e.keyCode === 13) {
+                  const inputValue = document.querySelector('.searchFoods-input').value;
+                  history.push({
+                    pathname: '/pizzas/lista',
+                    state: JSON.stringify(inputValue),
+                  })
+                }
+              }}
+              />
+          </div>
           <div className="container-restaurantList-text">
             <h1>Lista de restaurantes</h1>
             <p>Adipisicing et laborum esse proident nulla.</p>

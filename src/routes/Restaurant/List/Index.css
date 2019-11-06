@@ -36,10 +36,30 @@
   max-width: 800px;
 }
 
+.searchFoods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.searchFoods-input {
+  height: 50px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+}
+
 @media (min-width: 576px) {
   .restaurantList-item {
     width: 350px;
     margin-bottom: 30px;
+  }
+
+  .searchFoods-input {
+    width: 350px;
   }
 }
 
@@ -53,6 +73,10 @@
   .restaurantList-item {
     width: 30%;
     margin-bottom: 30px;
+  }
+
+  .searchFoods-input {
+    width: 90%;
   }
 }
 

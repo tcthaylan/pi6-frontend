@@ -1,0 +1,50 @@
+.foodList-container {
+  width: 80%;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.foodList-header {
+  height: 100px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.foodList-header > p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.foodList-header > p > span {
+  color: rgb(242, 34, 72);
+}
+
+.foodList-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.foodList-list-item-img {
+  width: 90px;
+  height: 90px;
+}
+
+.foodList-list-item-price {
+  font-weight: bold;
+}
+
+.foodList-list-item-btn {
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(242, 34, 72);
+  padding: 8px 25px;
+  border-radius: 20px;
+  border: none;
+}

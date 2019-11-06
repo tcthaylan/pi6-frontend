@@ -10,7 +10,7 @@ const MenuItem = (props) => {
       <div className="menuItem-text">
         <h4 className="menuItem-text-title">{name}</h4>
         <p className="menuItem-text-desc">{desc}</p>
-        <p className="menuItem-text-price">{price}</p>
+        <p className="menuItem-text-price">R$ {price.toFixed(2).replace('.', ',')}</p>
       </div>
     </div>
   )

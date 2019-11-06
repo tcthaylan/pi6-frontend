@@ -107,7 +107,7 @@ export class MapContainer extends Component {
       <React.Fragment>
         {!showMap ? (
             <div className="progressLoading">
-              kkk
+              Loading...
             </div>
           ) : this.renderMap()}
       </React.Fragment> 

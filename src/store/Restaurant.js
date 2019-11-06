@@ -58,7 +58,7 @@ class Restaurant {
 
   async getFoods(restaurantId) {
     try {
-      console.log('restaurantId')
+      console.log(restaurantId)
       const response = await axios.get(`${ip}/client/${restaurantId}/foods`, {
         headers: {
          'Content-Type': 'application/json'

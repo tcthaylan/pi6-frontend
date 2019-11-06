@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Auth from './store/Auth'
 import Restaurant from './store/Restaurant'
+import Food from './store/Food'
 import { Provider } from 'mobx-react';
 import {
   BrowserRouter,
@@ -14,7 +15,8 @@ import {
 
 const stores = {
   Auth,
-  Restaurant
+  Restaurant,
+  Food
 };
 
 ReactDOM.render(

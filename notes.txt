@@ -1,13 +1,13 @@
 - Cadastrar pizzarias e pizzas
 - Escrever textos
 - Arrumar footer
-- listar pizzas dinâmico
 - hospedar site
 - pesquisar pizzas por nome e listar ordem de preços
 /////
 - GET e POST pizzas api - OK
 - Remover a opção de criar conta - OK
 - desabilitar paginação - OK
+- listar pizzas dinâmico - OK
 //////////////////////////////////
 
 Sistema

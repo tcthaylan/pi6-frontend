@@ -74,13 +74,13 @@
 }
 
 .functionality-list .functionality-list-item:nth-child(1) > .card-image {
-  background-image: url('/images/icons/coffee.png');
+  background-image: url('/images/icons/dish.png');
 }
 .functionality-list .functionality-list-item:nth-child(2) > .card-image {
   background-image: url('/images/icons/serving-dish.png');
 }
 .functionality-list .functionality-list-item:nth-child(3) > .card-image {
-  background-image: url('/images/icons/beer.png');
+  background-image: url('/images/icons/pizza.png');
 }
 
 

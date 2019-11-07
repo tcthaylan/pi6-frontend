@@ -26,18 +26,18 @@ const Home = (props) => {
       <ul className="functionality-list">
         <li className="functionality-list-item">
           <span className="card-image"></span>
-          <h3 className="card-title">Non cupidatat</h3>
-          <p className="card-text">Deserunt commodo deserunt occaecat adipisicing Lorem.</p>
+          <h3 className="card-title">Custo benefício</h3>
+          <p className="card-text">Pizzas saborosas por um preço que cabe no seu bolso.</p>
         </li>
         <li className="functionality-list-item">
           <span className="card-image"></span>
-          <h3 className="card-title">Non cupidatat</h3>
-          <p className="card-text">Deserunt commodo deserunt occaecat adipisicing Lorem.</p>
+          <h3 className="card-title">Pracidade</h3>
+          <p className="card-text">Basta digitar um endereço e você encontrará uma infinidade de sabores</p>
         </li>
         <li className="functionality-list-item">
           <span className="card-image"></span>
-          <h3 className="card-title">Non cupidatat</h3>
-          <p className="card-text">Deserunt commodo deserunt occaecat adipisicing Lorem.</p>
+          <h3 className="card-title">Variedade</h3>
+          <p className="card-text">Encontre pizzas de diversos sabores.</p>
         </li>
       </ul>
     </div>

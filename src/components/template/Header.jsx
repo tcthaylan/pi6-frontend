@@ -50,7 +50,7 @@ class Header extends React.Component {
           pathname: '/'
           }}
           style={logoStyle}
-        >Epou Bear</ Link>
+        >Camparepizza</ Link>
         <nav className="navlinks">
           {!loggedUser.email ? (
             <ul className="navlinks-list">

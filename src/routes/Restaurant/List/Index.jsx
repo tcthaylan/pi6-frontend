@@ -58,6 +58,10 @@ class RestaurantList extends React.Component {
     return(
       <div>
         <div className="container-restaurantList">
+          <div className="container-restaurantList-text">
+            <h1>Restaurantes encontrados</h1>
+            <p>pesquise por um sabor</p>
+          </div>
           <div className="searchFoods">
             <input 
               type="text"
@@ -74,10 +78,7 @@ class RestaurantList extends React.Component {
               }}
               />
           </div>
-          <div className="container-restaurantList-text">
-            <h1>Lista de restaurantes</h1>
-            <p>Adipisicing et laborum esse proident nulla.</p>
-          </div>
+          
           <ol className="restaurantList">
             {this.renderRestaurants()}
           </ol>

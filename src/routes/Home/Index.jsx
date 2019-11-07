@@ -8,8 +8,8 @@ const Home = (props) => {
   <div className="homeContent">
     <div className="banner">
       <div className="banner-text">
-        <h1>Fugiat consectetur</h1>
-        <p>Id sit pariatur proident officia ex.</p>
+        <h1>Encontre as melhores pizzarias da sua região</h1>
+        <p>As melhores pizzas por um preço que cabe no seu bolso</p>
       </div>
       <input type="text" className="banner-input" placeholder="Digite o seu endereço" onKeyUp={(e) => {
         if (e.keyCode === 13) {
@@ -43,22 +43,22 @@ const Home = (props) => {
     </div>
     {/*  */}
     <div className="categories">
-      <h2 className="categories-title">Explore as categorias em alta</h2>
+      <h2 className="categories-title">Encontre os melhores sabores</h2>
       <ul className="categories-list">
         <li className="categories-list-item">
-          <Category name="Brasileira" image="brasileira.jpg" />
+          <Category name="Calabresa" image="pizza-calabresa.jpg" />
         </li>
         <li className="categories-list-item">
-          <Category name="Hamburguer" image="hamburguer.jpg" />
+          <Category name="Chocolate" image="pizza-de-chocolate.jpg" />
         </li>
         <li className="categories-list-item">
-          <Category name="Churrasco" image="churrasco.jpg" />
+          <Category name="Mussarela" image="pizza-mussarela.jpg" />
         </li>
         <li className="categories-list-item">
-          <Category name="Pizza" image="pizza.jpg" />
+          <Category name="Portuguesa" image="pizza-portuguesa.jpg" />
         </li>
         <li className="categories-list-item">
-          <Category name="Japonesa" image="japonesa.jpg" />
+          <Category name="Quatro queijos" image="pizza-quatro-queijos.jpg" />
         </li>
       </ul>
     </div>

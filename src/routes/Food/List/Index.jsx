@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Index.css'
 import { inject } from 'mobx-react';
 // import { Container } from './styles';
+import { ip } from '../../../utils/config'
 
 class FoodList extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class FoodList extends Component {
       <li className="foodList-list-item">
         <img
           className="foodList-list-item-img" 
-          src={`http://localhost:3000/files/${item.picture}`} />
+          src={`${ip}/files/${item.picture}`} />
         <p className="foodList-list-item-price">R$ {item.price.toFixed(2).replace('.', ',')}</p>
         <button 
           className="foodList-list-item-btn"

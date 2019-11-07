@@ -1,6 +1,7 @@
 import React from 'react'
 import './RestaurantAdmin.css'
 import Modal from '../components/modals/Modal'
+
 class RestaurantAdmin extends React.Component {
   constructor(props) {
     super(props)

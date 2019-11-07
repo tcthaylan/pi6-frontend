@@ -1,9 +1,10 @@
 import React from 'react'
 import './MenuItem.css'
+import { ip } from '../utils/config'
 
 const MenuItem = (props) => {
   const { name, desc, price, image } = props;
-  const url = `http://localhost:3000/files/${image}`
+  const url = `${ip}/files/${image}`
   return (
     <div className="menuItem">
       <img src={url} className="menuItem-img"/>

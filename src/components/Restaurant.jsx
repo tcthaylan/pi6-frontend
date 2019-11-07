@@ -1,11 +1,12 @@
 import React from 'react'
 import './Restaurant.css'
+import { ip } from '../utils/config'
 
 const Restaurant = (props) => {
   const { 
     history, name, starts, minutes, distance, desc, image, id 
   } = props;
-  const url = `http://localhost:3000/files/${image}`
+  const url = `${ip}/files/${image}`
   return(
     <div className="restaurant">
       <img src={url} className="restaurant-image"/>

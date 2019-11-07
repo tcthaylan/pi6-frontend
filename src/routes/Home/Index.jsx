@@ -37,7 +37,7 @@ const Home = (props) => {
         <li className="functionality-list-item">
           <span className="card-image"></span>
           <h3 className="card-title">Variedade</h3>
-          <p className="card-text">Encontre pizzas de diversos sabores.</p>
+          <p className="card-text">Encontre as melhores pizzarias da sua cidade com apenas um click</p>
         </li>
       </ul>
     </div>

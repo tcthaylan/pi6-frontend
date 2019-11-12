@@ -1,6 +1,7 @@
 import React from 'react'
 import './RestaurantAdmin.css'
 import Modal from '../components/modals/Modal'
+import { ip } from '../utils/config'
 
 class RestaurantAdmin extends React.Component {
   constructor(props) {

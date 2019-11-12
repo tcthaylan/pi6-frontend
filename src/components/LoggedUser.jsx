@@ -20,7 +20,6 @@ class LoggedUser extends React.Component {
     const { email, history } = this.props;
     return(
       <div className="loggedUser">
-        <img src="./default-user.png" />
         <p onClick={() => {
           history.push('/admin')
         }}>{email}</p>

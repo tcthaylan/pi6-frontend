@@ -31,7 +31,7 @@ const Home = (props) => {
         </li>
         <li className="functionality-list-item">
           <span className="card-image"></span>
-          <h3 className="card-title">Pracidade</h3>
+          <h3 className="card-title">Praticidade</h3>
           <p className="card-text">Basta digitar um endereço e você encontrará uma infinidade de sabores</p>
         </li>
         <li className="functionality-list-item">
@@ -52,7 +52,7 @@ const Home = (props) => {
           <Category name="Chocolate" image="pizza-de-chocolate.jpg" />
         </li>
         <li className="categories-list-item">
-          <Category name="Mussarela" image="pizza-mussarela.jpg" />
+          <Category name="Muçarela" image="pizza-mussarela.jpg" />
         </li>
         <li className="categories-list-item">
           <Category name="Portuguesa" image="pizza-portuguesa.jpg" />
